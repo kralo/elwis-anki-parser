@@ -1,0 +1,17 @@
+.card {
+ font-family: arial;
+ font-size: 20px;
+ text-align: center;
+ color: black;
+ background-color: white;
+}
+
+#outer {
+width: 100%; 
+text-align: center;
+}
+
+#inner {
+display: inline-block;
+}
+
