@@ -7,6 +7,13 @@ kompiliert direkt von elwis.de (Stand: 16. Januar 2013)
 
 Download [letzte Version](https://github.com/kralo/elwis-anki-parser/releases/latest)
 
+# ANKI Deck für den SBF See (ohne Navigationsaufgaben)
+
+kompiliert direkt von elwis.de (Stand: 16. Januar 2013)
+
+Download [letzte Version](https://github.com/kralo/elwis-anki-parser/releases/latest)
+
+
 ##Vorgehen:
 1. dieses Repository clonen
 2. einen Ordner `img` im gleichen Verzeichnis wie das Skript anlegen
