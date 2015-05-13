@@ -33,7 +33,7 @@ def dreistellig(in: String) = {
 implicit def toSafeDouble(st: String) = scala.util.Try { st.toDouble }.getOrElse(Double.NaN)
 
 var media: List[String] = List();
-val mediadir = "./img-binnen/" //last slash mandatory
+val mediadir = "./img-see/" //last slash mandatory
 
 def saveImage(path: String): String = {
   val index = path.lastIndexOf("/");
@@ -70,7 +70,7 @@ def ladeUndTu(page: String, Tags: String) = {
     val antwortencsv = frageoptionen.map(x=>processImg(x.child)).map( _.mkString("")).mkString(trenner) // alle Frageoptionen zusammen gefaltet
     val fragentext_elems = processImg((frage \ "li")(0).child.filterNot(_.label == "ol"))
     val fragentext = fragentext_elems.map(_.toString).filterNot(_.length < 2).mkString("") // alles bis auf die "ol" mit den Antwortmöglichkeiten
-    println("B"+dreistellig(fragenummer) + trenner + "(" + dreistellig(fragenummer) + ") " + fragentext + trenner + antwortencsv + trenner + Tags)
+    println("S"+dreistellig(fragenummer) + trenner + "(" + dreistellig(fragenummer) + ") " + fragentext + trenner + antwortencsv + trenner + Tags)
   }
 
 }
@@ -95,9 +95,8 @@ def renameMediaAndGetMediaFile(media: List[String]) {
   }
 }
 
-ladeUndTu("https://elwis.de/Freizeitschifffahrt/fuehrerscheininformationen/Fragenkatalog-Binnen/Basisfragen/index.html", "SBF-Binnen-Basisfragen")
-ladeUndTu("https://elwis.de/Freizeitschifffahrt/fuehrerscheininformationen/Fragenkatalog-Binnen/Binnen/index.html", "SBF-Binnen-Spezifisch-Binnen")
-ladeUndTu("https://elwis.de/Freizeitschifffahrt/fuehrerscheininformationen/Fragenkatalog-Binnen/Segeln/index.html", "SBF-Binnen-Spezifisch-Segeln")
+ladeUndTu("https://elwis.de/Freizeitschifffahrt/fuehrerscheininformationen/Fragenkatalog-See/Basisfragen/index.html", "SBF-See-Basisfragen")
+ladeUndTu("https://elwis.de/Freizeitschifffahrt/fuehrerscheininformationen/Fragenkatalog-See/See/index.html", "SBF-See-Spezifische-Fragen")
 
 renameMediaAndGetMediaFile(media)
 
