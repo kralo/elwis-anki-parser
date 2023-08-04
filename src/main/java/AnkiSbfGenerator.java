@@ -41,7 +41,7 @@ public class AnkiSbfGenerator {
 
 		for (Element headline : newsHeadlines.children()) {
 
-			if (headline.tagName().equals("p") && headline.hasClass("line")) {
+			if ((headline.tagName().equals("p") && headline.hasClass("line")) || headline.hasClass("dateOfIssue") && lFrage.isVollstaendig()) {
 
 				// Ende der Frage.
 				if (lFrage.isVollstaendig())
